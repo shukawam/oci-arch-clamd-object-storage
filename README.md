@@ -78,7 +78,7 @@ endpoint = "https://cell-1.streaming.sa-saopaulo-1.oci.oraclecloud.com"
 
 ## Deploy Using the Terraform CLI
 
-### Clone the Module
+### Clone the Module 
 
 Now, you'll want a local copy of this repo. You can make that with the commands:
 ```
