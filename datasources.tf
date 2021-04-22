@@ -14,3 +14,12 @@ data "oci_core_vnic_attachments" "ScanInstance_primaryvnic_attach" {
 data "oci_core_vnic" "ScanInstance_primaryvnic" {
   vnic_id = data.oci_core_vnic_attachments.ScanInstance_primaryvnic_attach.vnic_attachments.0.vnic_id
 }
+
+data "oci_identity_region_subscriptions" "home_region_subscriptions" {
+    tenancy_id = var.tenancy_ocid
+
+    filter {
+      name   = "is_home_region"
+      values = [true]
+    }
+}

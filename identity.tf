@@ -8,6 +8,7 @@ resource "oci_identity_compartment" "ScanCompart" {
 }
 
 resource "oci_identity_dynamic_group" "ScanDynGroup" {
+  provider = oci.homeregion  
   depends_on = [oci_core_instance.ScanInstance]
   compartment_id = var.tenancy_ocid
   description = "ScanDynGroup"
@@ -16,6 +17,7 @@ resource "oci_identity_dynamic_group" "ScanDynGroup" {
 }
 
 resource "oci_identity_policy" "ScanPolicy1" {
+  provider = oci.homeregion  
   depends_on = [oci_identity_dynamic_group.ScanDynGroup]
   compartment_id = var.tenancy_ocid
   description = "ScanPolicy"
@@ -28,6 +30,7 @@ resource "oci_identity_policy" "ScanPolicy1" {
 }
 
 resource "oci_identity_policy" "ScanPolicy2" {
+  provider = oci.homeregion  
   depends_on = [oci_identity_dynamic_group.ScanDynGroup]
   compartment_id = oci_identity_compartment.ScanCompart.id
   description = "ScanPolicy"
