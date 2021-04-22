@@ -8,7 +8,7 @@ resource "random_id" "tag" {
 resource "oci_identity_tag_namespace" "ArchitectureCenterTagNamespace" {
     compartment_id = var.compartment_ocid
     description = "ArchitectureCenterTagNamespace"
-    name = "ArchitectureCenter\\deploy-clamd-object-storage-${random_id.tag.hex}"
+    name = "ArchitectureCenter\\anti-virus-${random_id.tag.hex}"
 
     provisioner "local-exec" {
        command = "sleep 10"
