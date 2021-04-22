@@ -1,3 +1,6 @@
+## Copyright (c) 2020, Oracle and/or its affiliates. 
+## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
+
 output "public-ip-for-compute-instance" { 
   value = oci_core_instance.ScanInstance.public_ip
 }

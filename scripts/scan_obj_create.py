@@ -1,3 +1,6 @@
+## Copyright (c) 2020, Oracle and/or its affiliates. 
+## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
+
 import oci, sys, time, pyclamd
 from base64 import b64decode
 #
