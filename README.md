@@ -10,7 +10,7 @@ You can store an unlimited amount of unstructured data of any content type in yo
 
 We are going to use Clamav open source antivirus engine for detecting trojans, viruses, malware and other malicious threats for this solution.
 
-![AVobj1.JPG](https://github.com/Everson4t/antivirus-for-objectstore/blob/main/images/AVobj1.JPG)
+![AVobj1.JPG](https://github.com/oracle-quickstart/oci-arch-clamd-object-storage/blob/main/images/AVobj1.JPG)
 
 ## Deploy using OCI Console
 
@@ -82,7 +82,7 @@ endpoint = "https://cell-1.streaming.sa-saopaulo-1.oci.oraclecloud.com"
 
 Now, you'll want a local copy of this repo. You can make that with the commands:
 ```
-git clone https://github.com/Everson4t/antivirus-for-objectstore
+git clone https://github.com/oracle-quickstart/oci-arch-clamd-object-storage
 cd antivirus-for-objectstore
 ls
 ```
@@ -124,7 +124,7 @@ When you no longer need the deployment, you can run this command to destroy the 
 ### To scan your bucket do the following:
 1. Get a small python script called scan_bucket.py and run it to check for virus and move infected objects to quarantine.
 ```
-wget https://raw.githubusercontent.com/Everson4t/antivirus-for-objectstore/main/scripts/scan_bucket.py
+wget https://raw.githubusercontent.com/oracle-quickstart/oci-arch-clamd-object-storage/main/scripts/scan_bucket.py
 sudo python3 scan_bucket.py <your_bucket> quarantine
 ```
 
@@ -135,7 +135,7 @@ sudo python3 scan_bucket.py <your_bucket> quarantine
    
    You need to provide source and target buckets and streaming OCID and endpoint that you can get from OCI console or terraform output
 ```
-wget https://raw.githubusercontent.com/Everson4t/antivirus-for-objectstore/main/scripts/scan_obj_create.py
+wget https://raw.githubusercontent.com/oracle-quickstart/oci-arch-clamd-object-storage/main/scripts/scan_obj_create.py
 sudo python3 scan_obj_create.py checkinobj quarantine <stream_ocid> <stream_endpoint> 
 ```
 
