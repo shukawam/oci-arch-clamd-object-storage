@@ -1,8 +1,6 @@
-# Low cost antivirus for object storage
+# oci-arch-clamd-object-storage
 
 Low cost Antivirus for Oracle Cloud object store 
-
-## Overview
 
 Improve security and maintain compliance by building a low cost antivirus to scan all your objects in a bucket and also scan an object when it is created using only an OCI instance and open source software.
 
@@ -10,7 +8,13 @@ You can store an unlimited amount of unstructured data of any content type in yo
 
 We are going to use Clamav open source antivirus engine for detecting trojans, viruses, malware and other malicious threats for this solution.
 
-![AVobj1.JPG](https://github.com/oracle-quickstart/oci-arch-clamd-object-storage/blob/main/images/AVobj1.JPG)
+## Prerequisites
+
+- Permission to `manage` the following types of resources in your Oracle Cloud Infrastructure tenancy: `vcns`, `internet-gateways`, `route-tables`, `security-lists`, `subnets`, `stream`, `stream-pull`, `stream-push`, and `instances`.
+
+- Quota to create the following resources: 1 VCN, 1 subnet, 1 Internet Gateway, 1 route rule, 2 object store buckets, 1 Streaming Instance, 1 Event Service Rule, and 1 compute instances (Scan Instance).
+
+If you don't have the required permissions and quota, contact your tenancy administrator. See [Policy Reference](https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Reference/policyreference.htm), [Service Limits](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm), [Compartment Quotas](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcequotas.htm).
 
 ## Deploy using OCI Console
 
@@ -186,3 +190,10 @@ I'd like to say thank you very much to Fabio Silva and Fernando Costa who help m
 ## License
 
 Clam AntiVirus is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+## Architecture Diagram
+![](./images/oci-arch-clamd-object-storage.png)
+
+## Reference Archirecture
+
+For details of the architecture, see [_Low cost antivirus for Object Storage_](https://docs.oracle.com/en/solutions/anti-virus/index.html)
